@@ -4,7 +4,7 @@ Dockerfile for [kaldi-gstreamer-server](https://github.com/raeidsaqur/kaldi-gstr
 Synopsis
 --------
 
-This dockerfile automatically builds master and worker servers that are explained at [Full-duplex Speech-to-text System for Estonian](http://ebooks.iospress.nl/volumearticle/37996) from Tanel Alumäe and implemented by himself at https://github.com/raeidsaqur/kaldi-gstreamer-server.
+This dockerfile automatically builds master and worker servers that are explained at https://github.com/raeidsaqur/kaldi-gstreamer-server [forked from the amazing Tanel Alumae's similarly named repo].
 
 Using this project you will be able to run an automatic speech recognition (ASR) server in a few minutes.
 
@@ -15,8 +15,7 @@ The ASR server that will be set up here requires some [kaldi models](http://www.
 
 You must have these models on your machine. You must also have an yaml file describing these models. Please, check some examples [here](https://github.com/raeidsaqur/kaldi-gstreamer-server/blob/master/sample_worker.yaml), [here](https://github.com/raeidsaqur/kaldi-gstreamer-server/blob/master/estonian_worker.yaml) and [here](https://github.com/raeidsaqur/kaldi-gstreamer-server/blob/master/sample_english_nnet2.yaml) to find out how to write your own yaml files.
 
-There are some kaldi models available for download. I have tested my setup with this [one](https://phon.ioc.ee/~tanela/tedlium_nnet_ms_sp_online.tgz), which is for English. I'm trying to build a model for Brazilian Portuguese, but until now I didn't find enough free/open resources.
-
+There are some kaldi models available for download. I have tested my setup with this [one](https://phon.ioc.ee/~tanela/tedlium_nnet_ms_sp_online.tgz), which is for English. 
 
 Install docker
 --------------
