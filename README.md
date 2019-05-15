@@ -56,6 +56,11 @@ And, inside the container, start the service:
  /opt/start.sh -y /opt/models/nnet2.yaml
 ```
 
+**Update** the dockerfile has been updated to include the below command as a Docker run CMD (as of May 15, 2019). So just this should suffice, no need to go inside the container and manually run the start shell script:
+```
+docker run -it -p 8080:80 -v /media/kaldi_models:/opt/models raeidsaqur/docker-kaldi-gstreamer-server:latest 
+```
+
 You will see that 2 .log files (worker.log and master.log) will be created at /opt of your containter. If everything goes ok, you will see some lines indicating that there is a worker available. In this case, you can go back to your host machine (`Ctrl+P and Ctrl+Q` on the container). Your ASR service will be listening on port 8080.
 
 For stopping the servers, you may execute the following command inside your container:
