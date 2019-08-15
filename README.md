@@ -104,7 +104,13 @@ First of all, please, check if your setup is ok. It can be done using your brows
 
 After checking the setup, you should test your speech recognition service. For this, there are several options, and the following list gives some ideas:
 
-1. You can download [this client](https://github.com/raeidsaqur/kaldi-gstreamer-server/blob/master/kaldigstserver/client.py) for your host machine and execute it. When the master is on the local host, port 8080 and you have a wav file sampled at 16 kHz located at /home/localhost/audio/, you can type: ```python client.py -u ws://localhost:8080/client/ws/speech -r 32000 /home/localhost/audio/sample16k.wav```
+1. You can download [this client](https://github.com/raeidsaqur/kaldi-gstreamer-server/blob/master/kaldigstserver/client.py) for your host machine and execute it. When the master is on the local host, port 8080 and you have a wav file sampled at 16 kHz located at /home/localhost/audio/, you can type:
+
+```python client.py -u ws://localhost:8080/client/ws/speech -r 32000 /home/localhost/audio/sample16k.wav```
+
+*OBS*: For running the client example, you must install ws4py version 0.3.2.
+This can be installed using ```pip install --user ws4py==0.3.2. ```
+You may also need simplejson and pyaudio. They may also be installed using pip.
 
 2. You can use [Kõnele](http://kaljurand.github.io/K6nele/) for testing the service. It is an Android app that is freely available for downloading at Google Play. You must configure it to use your ASR service. Below you'll find some screenshots that may help you in this configuration. First, you should click on **Kõnele (fast recognition)**. Then, change the **WebSocket URL**. In my case, I connected to a master server located at ws://192.168.1.10:8080/client/ws/speech. After that, open a **notepad-like** application and change your input method to **Kõnele speech keyboard** and you'll see a **yellow button** instead of your traditional keyboard. Press this button and enjoy!
 
@@ -180,6 +186,13 @@ and i was a kid the disaster we worry about most was a nuclear war. that's why w
 * Audio 1272-128104-0000.wav:
 
 mr coulter is the apostle of the middle classes and we're glad to welcome his gospel.
+
+
+Adding SSL or Enabling the wss:// protocol
+-------------------------------------------
+The current service uses ws:// protocol, but for practical applications, you will need to use certs and enable wss:// protocol. This sub-section details how an nGINX wrapper and self-signed certs can be used to enable this.
+*** Upcoming soon ***
+
 
 Credits
 --------
