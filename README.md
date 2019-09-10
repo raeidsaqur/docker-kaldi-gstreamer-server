@@ -1,6 +1,8 @@
 # docker-kaldi-gstreamer-server
 Dockerfile for [kaldi-gstreamer-server](https://github.com/raeidsaqur/kaldi-gstreamer-server).
 
+
+
 Synopsis
 --------
 

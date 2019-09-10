@@ -1,0 +1,6 @@
+# IDE
+.idea
+
+# Service worker
+sw.*
+.DS_Store
